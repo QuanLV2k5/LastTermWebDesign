@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShop</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload banner
+  -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <h1 style="color: coral;">BookShop</h1>
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Trang chủ</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#product" class="navbar-link">Sản phẩm</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="cart.html" class="navbar-link">Giỏ hàng</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link">Liên hệ</a>
+          </li>
+
+        </ul>
+
+        <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Wishlist</span>
+
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </button>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 
+        - #COLLECTION
+      -->
+
+    <section class="section collection">
+      <div class="container">
+
+        <ul class="collection-list has-scrollbar">
+
+          <li>
+            <h3 class="h4-1 card-title">Sách tư duy - kỹ năng</h3>
+            <div class="collection-card" style="background-image: url('./assets/images/tuduy.jpg')">
+            </div>
+          </li>
+
+          <li>
+            <h3 class="h4-2 card-title">Sách khoa học - giáo dục</h3>
+            <div class="collection-card" style="background-image: url('./assets/images/nguongoc.jpg')">
+            </div>
+          </li>
+
+          <li>
+            <h3 class="h4-3 card-title">Sách văn hoá - nghệ thuật</h3>
+            <div class="collection-card" style="background-image: url('./assets/images/vanhoa.jpg')">
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- 
+        - #PRODUCT
+      -->
+
+    <section class="section product" id="product">
+      <div class="container">
+
+        <h2 class="h2 section-title">Top sách bán chạy</h2>
+
+        <ul class="product-list">
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/tuduynguoc.jpg" width="312" height="350" loading="lazy" alt="Tư duy ngược"
+                  class="image-contain">
+
+                <div class="card-badge">New</div>
+
+                <ul class="card-action-list">
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Tư Duy Ngược', 139000, './assets/images/tuduynguoc.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Nguyễn Anh Dũng
+                </div>
+
+                <h3 class="h3 card-title">
+                  Tư Duy Ngược
+                </h3>
+
+                <data class="card-price" value="180.85">139.000<u>đ</u></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/sachhoa.jpg" width="312" height="350" loading="lazy" alt="Ngại gì môn hoá"
+                  class="image-contain">
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Ngại gì môn hoá', 87200, './assets/images/sachhoa.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Tom Whipple - James Davies
+                </div>
+
+                <h3 class="h3 card-title">
+                  Ngại Gì Môn Hoá
+                </h3>
+                <data class="card-price" value="190.85">87.200<u>đ</u></data>
+              </div>
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/dongtoc.jpg" width="312" height="350" loading="lazy" alt="Gia phả dòng tộc"
+                  class="image-contain">
+
+                <div class="card-badge">New</div>
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Gia Phả Dòng Tộc', 103200, './assets/images/dongtoc.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Gia Cát - Minh Lâm
+                </div>
+
+                <h3 class="h3 card-title">
+                  Gia Phả Dòng Tộc
+                </h3>
+
+                <data class="card-price" value="160.85">103.200<u>đ</u></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/dacnhantam.jpg" width="312" height="350" loading="lazy" alt="Đắc Nhân Tâm"
+                  class="image-contain">
+
+                <div class="card-badge"> -20%</div>
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Đắc Nhân Tâm', 68800, './assets/images/dacnhantam.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Dale Carnegie
+                </div>
+                <h3 class="h3 card-title">Đắc Nhân Tâm</h3>
+
+                <data class="card-price" value="170.85">68.800<u>đ</u> <del>86.000<u>đ</u></del></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/niemtin.jpg" width="312" height="350" loading="lazy" alt="Tốc Độ Của Niềm tin"
+                  class="image-contain">
+
+                <div class="card-badge">New</div>
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Tốc Độ Của Niềm tin', 140000, './assets/images/niemtin.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Stephen M.R. Covey
+                </div>
+
+                <h3 class="h3 card-title">
+                  Tốc Độ Của Niềm tin
+                </h3>
+
+                <data class="card-price" value="120.85">140.000<u>đ</u></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/duockhoa.jpg" width="312" height="350" loading="lazy"
+                  alt="Dược Khoa Cho Tâm Hồn" class="image-contain">
+
+                <div class="card-badge"> -20%</div>
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Dược Khoa Cho Tâm Hồn', 100000, './assets/images/duockhoa.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  OSHO
+                </div>
+
+                <h3 class="h3 card-title">
+                  Dược Khoa Cho Tâm Hồn
+                </h3>
+
+                <data class="card-price" value="100.85">100.000<u>đ</u> <del>125.000<u>đ</u></del></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/nghethuat.png" width="312" height="350" loading="lazy"
+                  alt="Để Hiểu Nghệ Thuật" class="image-contain">
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Để Hiểu Nghệ Thuật', 231200, './assets/images/nghethuat.png')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Janetta Rebold Benton
+                </div>
+
+                <h3 class="h3 card-title">
+                  Để Hiểu Nghệ Thuật
+                </h3>
+
+                <data class="card-price" value="120.85">231.200<u>đ</u></data>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li class="product-item">
+            <div class="product-card" tabindex="0">
+
+              <figure class="card-banner">
+                <img src="./assets/images/chamsocme.jpg" width="312" height="350" loading="lazy" alt="Hãy Chăm Sóc Mẹ"
+                  class="image-contain">
+
+                <ul class="card-action-list">
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-1"
+                      onclick="themVaoGioHang('Hãy Chăm Sóc Mẹ', 84800, './assets/images/chamsocme.jpg')">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                  </li>
+
+                  <li class="card-action-item">
+                    <button class="card-action-btn" aria-labelledby="card-label-2">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                  </li>
+
+                </ul>
+              </figure>
+
+              <div class="card-content">
+
+                <div class="card-cat">
+                  Shin Kyung-Sook
+                </div>
+
+                <h3 class="h3 card-title">
+                  Hãy Chăm Sóc Mẹ
+                </h3>
+                <data class="card-price" value="100.85">84.800<u>đ</u></data>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 
+        - #SPECIAL
+      -->
+
+    <section class="section special">
+      <div class="container">
+        <div class="special-product">
+
+          <h2 class="h2 section-title">
+            <span class="text">Truyện tranh</span>
+
+            <span class="line"></span>
+          </h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="product-item">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/thitran.jpg" width="312" height="350" loading="lazy"
+                    alt="Thị trấn hoa mười giờ" class="image-contain">
+
+                  <div class="card-badge">New</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1"
+                        onclick="themVaoGioHang('Thị trấn hoa mười giờ', 74500, './assets/images/thitran.jpg')">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                    </li>
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-cat">
+                    NXB Thanh Niên
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    Thị trấn hoa mười giờ
+                  </h3>
+
+                  <data class="card-price" value="74.500">74.500<u>đ</u></data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/tyquay.jpg" width="312" height="350" loading="lazy" alt="Tý quậy"
+                    class="image-contain">
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1"
+                        onclick="themVaoGioHang('Tý quậy', 102000, './assets/images/tyquay.jpg')">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                    </li>
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-cat">
+                    NXB Kim Đồng
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    Tý quậy
+                  </h3>
+
+                  <data class="card-price" value="102.000">102.000<u>đ</u></data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/doraemon.jpg" width="312" height="350" loading="lazy" alt="Doremon"
+                    class="image-contain">
+
+                  <div class="card-badge">New</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1"
+                        onclick="themVaoGioHang('Doremon', 18500, './assets/images/doraemon.jpg')">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                    </li>
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-cat">
+                    NXB Kim Đồng
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    Doremon
+                  </h3>
+
+                  <data class="card-price" value="18.500">18.500<u>đ</u></data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/thandong.jpg" width="312" height="350" loading="lazy"
+                    alt="Thần Đồng Đất Việt" class="image-contain">
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1"
+                        onclick="themVaoGioHang('Thần Đồng Đất Việt', 8500, './assets/images/thandong.jpg')">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                    </li>
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-cat">
+                    NXB Đại học sư phạm TP.HCM
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    Thần Đồng Đất Việt
+                  </h3>
+
+                  <data class="card-price" value="8.500">8.500<u>đ</u></data>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+        - #SERVICE
+      -->
+
+    <section class="section service">
+      <div class="container">
+
+        <ul class="service-list">
+
+          <li class="service-item">
+            <div class="service-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/service-1.png" width="53" height="28" loading="lazy" alt="Service icon">
+              </div>
+
+              <div>
+                <h3 class="h4 card-title">Giao hàng miễn phí</h3>
+
+                <p class="card-text">
+                  Cho đơn hàng trên <span>100.000<u>đ</u></span>
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/service-2.png" width="43" height="35" loading="lazy" alt="Service icon">
+              </div>
+
+              <div>
+                <h3 class="h4 card-title">Thanh toán nhanh</h3>
+
+                <p class="card-text">
+                  Thanh toán an toàn 100%
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/service-3.png" width="40" height="40" loading="lazy" alt="Service icon">
+              </div>
+
+              <div>
+                <h3 class="h4 card-title">Hoàn trả miễn phí</h3>
+
+                <p class="card-text">
+                  Hoàn tiền sau 3 ngày
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-card">
+              <div class="card-icon">
+                <img src="./assets/images/service-4.png" width="40" height="40" loading="lazy" alt="Service icon">
+              </div>
+              <div>
+                <h3 class="h4 card-title">Hỗ trợ 24/7</h3>
+
+                <p class="card-text">
+                  Nhận hỗ trợ nhanh
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <h1 style="color: coral;">BookShop</h1>
+          </a>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box" id="contact">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Liên hệ chúng tôi</p>
+            </li>
+
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+                <span class="footer-link-text">
+                  78 Bạch Đằng, Quận Hải Châu, Đà Nẵng, Việt Nam
+                </span>
+              </address>
+            </li>
+
+            <li>
+              <a href="tel:0764569765" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+                <span class="footer-link-text">0764569765</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:lvq2k5@gmail.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+
+                <span class="footer-link-text">lvq2k5@gmail.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Tài khoản của bạn</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Giỏ hàng</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Sản phẩm yêu thích</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Lịch sử giao dịch</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Kiểm tra đơn hàng</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Thời gian mở cửa</p>
+
+            <table class="footer-table">
+              <tbody>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">T2 - T3:</th>
+
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">T4:</th>
+
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">T6:</th>
+
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">T7:</th>
+
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">CN:</th>
+
+                  <td class="table-data">Đóng cửa</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Đăng ký nhận bản tin</p>
+
+            <p class="newsletter-text">
+              Đừng bỏ lỡ những tin nhắn ưu đãi độc quyền dành riêng cho bạn.
+            </p>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - #GO TO TOP
+  -->
+  <a href="#top" class="go-top-btn" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
